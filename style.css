@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  color: #444;
+  font-weight: 600;
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  /* background: #3e1e6898; */
+  background-color: rgba(240, 255, 255, 0.397);
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+body {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("./images/bg1.jpg");
+  height: 100vh;
+
+  background-size: cover;
+  /* background-position: 450px; */
+}
+
+/*Glassmorphism card effect*/
+.card {
+  width: 40%;
+  /* min-height: 80%; */
+  margin: 5% auto;
+  backdrop-filter: blur(4px) saturate(180%);
+  -webkit-backdrop-filter: blur(4px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 32px rgba(68, 68, 68, 0.12);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+/*Elements Styling*/
+
+.header {
+  width: 80%;
+  margin: 5% auto;
+  padding-bottom: 5%;
+  /* padding: 0 10%; */
+  border-bottom: 1px solid #583c87;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.payment__author-avatar {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-color: #777;
+}
+.merchant-logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.payment__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  align-self: flex-end;
+  font-size: 1.1rem;
+}
+.payment__title {
+  font-size: 2rem;
+}
+.payment__description {
+  align-self: flex-end;
+  font-size: 2rem;
+  padding: 2% 10%;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto 6%;
+}
+
+.payment__choice {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 4%;
+}
+
+.payment__options {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 0 auto 5%;
+}
+.payment__item {
+  font-size: 1.6rem;
+  padding-top: 5px;
+}
+.payment__amount {
+  font-size: 2.5rem;
+}
+.button {
+  /* display: flex; */
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  border: none;
+}
+.button p {
+  font-size: 1.4rem;
+}
+.button:hover {
+}
+p {
+  text-align: center;
+}
+.switch__icon {
+}
+
+/*Payment Carousel Effect*/
+.payment_switch {
+  width: 80%;
+  height: 28rem;
+  margin: 0 auto;
+  border-bottom: 1px solid #583c87;
+  /* display: none; */
+}
+
+.payment-slides {
+  display: flex;
+  width: 100%;
+  /* margin-left: -500px; */
+}
+.payment-slide {
+  width: 100%;
+  /* display: none; */
+  /* border: 1px solid blue; */
+}
+.hidden {
+  display: none;
+}
+.payment-title {
+  max-width: max-content;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.payment-instructions {
+  font-size: 1.4rem;
+  margin-bottom: 1%;
+}
+.bank-input {
+  width: 80%;
+  margin-left: 10%;
+}
+.input {
+  height: 4rem;
+  border-radius: 6px;
+  margin-bottom: 3%;
+  padding: 0 10px;
+}
+.ussd-response {
+  margin-top: 5%;
+  /* display: none; */
+}
+.ussd-code {
+  /* height: 3rem; */
+  border-radius: 6px;
+  width: 80%;
+  display: inline-block;
+  margin: 3% 10% 5%;
+}
+.qr-code {
+  border: 1px solid #583c87;
+  height: 18rem;
+  width: 50%;
+  margin: 0 auto 5%;
+}
+.card-number {
+  width: 100%;
+}
+.input-flex {
+  width: 80%;
+  margin: 0 auto;
+}
+.security-code {
+  display: inline-block;
+  margin-right: 4%;
+}
+.btn {
+  background-color: #583c87;
+  color: azure;
+  font-weight: 700;
+  cursor: pointer;
+}
+.bank-pay {
+  width: 100%;
+}
+.bank-payment--details {
+  margin: 5% auto;
+  padding: 4% 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-size: 800;
+  border-radius: 6px;
+  box-shadow: 0 0 8px 8px #573c8715;
+  width: 80%;
+}
+.secured {
+  font-size: 1.4rem;
+  margin: 1% auto 2%;
+}
+
+@media screen and (min-width: 576px) and (max-width: 900px) {
+  .card {
+    width: 80%;
+    margin-top: 10%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .card {
+    width: 95%;
+    margin-top: 10%;
+  }
+}
