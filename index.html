@@ -90,31 +90,34 @@
               <div class="input-flex">
                 <label for="cardNumber"></label>
                 <input
-                  type="number"
+                  type="text"
                   name="cardNumber"
                   id="cardNumber"
                   class="card-number input"
                   placeholder="Card Number"
                   required
                 />
-                <label for="securityCode"></label>
-                <input
-                  type="number"
-                  name="securityCode"
-                  id="securityCode"
-                  class="security-code input"
-                  placeholder="CVV"
-                  required
-                />
-                <label for="validity"></label>
-                <input
-                  type="date"
-                  name="validity"
-                  id="validity"
-                  class="validity input"
-                  placeholder="validity"
-                  required
-                />
+                <div class="card-flex">
+                  <label for="securityCode"></label>
+                  <input
+                    type="text"
+                    name="securityCode"
+                    id="securityCode"
+                    class="security-code input"
+                    max="3"
+                    placeholder="CVV"
+                    required
+                  />
+                  <label for="validity"></label>
+                  <input
+                    type="text"
+                    name="validity"
+                    id="validity"
+                    class="validity input"
+                    placeholder="mm/yy"
+                    required
+                  />
+                </div>
                 <button class="btn bank-pay input">PAY</button>
               </div>
             </div>
