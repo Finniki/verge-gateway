@@ -7,40 +7,33 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  font-family: "Rubik", sans-serif;
-  color: #444;
-  font-weight: 600;
-}
-
 .background {
   position: fixed;
   width: 100vw;
   min-height: 100vh;
   top: 0;
   left: 0;
-  /* background: #3e1e6898; */
   background-color: rgba(240, 255, 255, 0.397);
   overflow: hidden;
   overflow-x: scroll;
 }
 
 body {
+  font-family: "Rubik", sans-serif;
+  color: #444;
+  font-weight: 600;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0.3)
     ),
     url("./images/bg1.jpg");
   height: 100vh;
-
   background-size: cover;
-  /* background-position: 450px; */
 }
 
 /*Glassmorphism card effect*/
 .card {
   width: 40%;
-  /* min-height: 80%; */
   margin: 5% auto 1%;
   backdrop-filter: blur(4px) saturate(180%);
   -webkit-backdrop-filter: blur(4px) saturate(180%);
@@ -114,21 +107,36 @@ body {
   font-size: 2.5rem;
 }
 .button {
-  /* display: flex; */
   border-radius: 50%;
   height: 6rem;
   width: 6rem;
   border: none;
 }
-.button p {
+.button span {
+  display: none;
   font-size: 1.4rem;
 }
-.button:hover {
+.icon {
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 2rem;
 }
+.btn:hover span {
+  display: block;
+  margin-top: -10px;
+}
+.btn:hover .icon {
+  margin-left: 50px;
+  margin-top: 10px;
+  transform: rotate(360deg);
+}
+.btn:hover .icon::before {
+  display: none;
+  border: none;
+  transition: all 0.8s linear;
+}
+
 p {
   text-align: center;
-}
-.switch__icon {
 }
 
 /*Payment Carousel Effect*/
@@ -143,12 +151,9 @@ p {
 .payment-slides {
   display: flex;
   width: 100%;
-  /* margin-left: -500px; */
 }
 .payment-slide {
   width: 100%;
-  /* display: none; */
-  /* border: 1px solid blue; */
 }
 .hidden {
   display: none;
@@ -178,10 +183,8 @@ p {
 }
 .ussd-response {
   margin-top: 5%;
-  /* display: none; */
 }
 .ussd-code {
-  /* height: 3rem; */
   border-radius: 6px;
   width: 80%;
   display: inline-block;
@@ -209,7 +212,6 @@ p {
 .validity {
   width: 40%;
 }
-
 .btn {
   background-color: #583c87;
   color: azure;
